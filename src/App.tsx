@@ -5,9 +5,11 @@ import SecretPage from './components/SecretPage';
 import FinalPage from './components/FinalPage';
 import ToBeContinuedPage from './components/ToBeContinuedPage';
 import PhotoPage from './components/PhotoPage';
+import WaitingPage from './components/WaitingPage';
+import CoranPromisePage from './components/CoranPromisePage';
 import FloatingHeart from './components/FloatingHeart';
 
-type Page = 'home' | 'cards' | 'secret' | 'final' | 'photo' | 'toBeContinued';
+type Page = 'home' | 'cards' | 'secret' | 'final' | 'photo' | 'coranPromise' | 'toBeContinued' | 'waiting';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -27,9 +29,13 @@ function App() {
       case 'final':
         return <FinalPage onRestart={() => navigateTo('home')} onNext={() => navigateTo('photo')} />; // Passe à la page photo
       case 'photo':
-        return <PhotoPage onNext={() => navigateTo('toBeContinued')} />;
+        return <PhotoPage onNext={() => navigateTo('coranPromise')} />;
+      case 'coranPromise':
+        return <CoranPromisePage onNext={() => navigateTo('toBeContinued')} />;
       case 'toBeContinued':
         return <ToBeContinuedPage onRestart={() => navigateTo('home')} />;
+      case 'waiting':
+        return <WaitingPage onHome={() => navigateTo('home')} />;
       default:
         return <HomePage onStart={() => navigateTo('cards')} />;
     }
