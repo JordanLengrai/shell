@@ -34,7 +34,7 @@ const SecretPage: React.FC<SecretPageProps> = ({ onBack }) => {
           <div className="mb-8">
             <div className="text-6xl mb-6">💝</div>
             <p className="text-xl text-gray-700 leading-relaxed font-light mb-6">
-              Félicitations, mon détective du cœur ! 
+              Félicitations, mon détective d'amour ! 
               <br />
               <span className="text-pink-600 font-medium">Voici une surprise spéciale rien que pour toi...</span>
             </p>
@@ -53,24 +53,14 @@ const SecretPage: React.FC<SecretPageProps> = ({ onBack }) => {
             </div>
           </div>
 
-          {/* Special photo placeholder */}
-          <div className="bg-gradient-to-br from-yellow-100 to-pink-100 rounded-2xl p-8 border border-yellow-200">
-            <div className="text-4xl mb-4">📸</div>
-            <p className="text-gray-700 font-light">
-              <em>Ici, tu peux imaginer notre plus belle photo ensemble...</em>
-              <br />
-              <span className="text-sm text-gray-500 mt-2 block">
-                (Dans la vraie version, tu pourrais mettre votre photo préférée !)
-              </span>
-            </p>
-          </div>
+      
 
           {/* Fun fact */}
           <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200">
             <div className="text-2xl mb-2">🎯</div>
             <p className="text-gray-700 font-light">
               <strong>Le savais-tu ?</strong> J'ai caché ce petit cœur juste pour voir si tu es aussi curieuse que je le pense... 
-              Et devine quoi ? Tu l'es ! C\'est une des milliers de choses que j'adore chez toi.
+              Et devine quoi ? Tu l'es ! C'est une des milliers de choses que j'adore chez toi.
             </p>
           </div>
         </div>

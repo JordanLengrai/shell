@@ -2,9 +2,10 @@ import React from 'react';
 
 interface PhotoPageProps {
   onNext: () => void;
+  onSecret?: () => void;
 }
 
-const PhotoPage: React.FC<PhotoPageProps> = ({ onNext }) => {
+const PhotoPage: React.FC<PhotoPageProps> = ({ onNext, onSecret }) => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-pink-100 to-purple-100">
       <div className="max-w-xl mx-auto text-center bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-pink-100">
@@ -27,6 +28,18 @@ const PhotoPage: React.FC<PhotoPageProps> = ({ onNext }) => {
           Continuer
         </button>
       </div>
+      {/* Bouton secret */}
+      {onSecret && (
+        <button
+          onClick={onSecret}
+          className="fixed bottom-6 right-6 z-50 opacity-40 hover:opacity-90 transition-all duration-300 bg-white rounded-full p-3 shadow-lg"
+          aria-label="Surprise secrète"
+        >
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+            <path fill="#a21caf" d="M12 21s-6.7-5.2-9.3-8.3A6 6 0 0 1 12 4a6 6 0 0 1 9.3 8.7C18.7 15.8 12 21 12 21Z"/>
+          </svg>
+        </button>
+      )}
     </div>
   );
 };
